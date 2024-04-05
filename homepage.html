@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="top-panel.css">
+        <link rel="stylesheet" href="body.css">
+        <link rel="stylesheet" href="datetime.css">
+     </head>
+    <body onload="initClock()">
+        <div class="top-panel">
+            <div>
+                <p style="display: flex; margin-left: 20px; margin-top: 25px; margin-bottom: 0px; color: white; font-weight: bold; text-decoration: underline; width: 450px;">TECHNOLOGICAL UNIVERSITY OF THE PHILIPPINES</p>
+                <p style=" display: flex; margin-left: 20px; margin-top: 5px; color: rgb(36, 30, 30); font-weight: bold;"> <i>SERVING WITH PURE PASSION AND DEDICATION </i></p>
+            </div>
+            <div class="datetime">
+                <div class="date"></div>
+                <span id="dayname">Day </span>,
+                <span style="margin-right: 5px; margin-left: 5px;" id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span style=" margin-left: 5px;" id="year">Year</span>
+                </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+                </div>
+        </div>
+        <div class="main-content">
+            <div class="tup-logoo">
+            <img class="tup-logo" src="thumbnails/TUP logo.gif">
+            </div>
+            <div class="info-area">
+                    <div class="email-pass">
+                <div>
+                <p style="font-weight: bold; color: rgb(189, 36, 36); cursor: default;"> EMAIL </p>
+                <input style="height: 40px; width: 300px; margin-bottom: 10px; padding-left: 10px;">
+                <p style="font-weight: bold; color: rgb(189, 36, 36); cursor: default;"> PASSWORD </p>
+                <input type="password" style="height: 40px; width: 300px; padding-left: 10px; margin-bottom: 0px;">
+                </div>
+                    </div>
+                <div class="OTP-forgot">
+                    <p style="display: inline-block; margin-left: 5px; margin-bottom: 20px; cursor: pointer;">Send OTP</p>
+                    <p style="display: inline-block; margin-left: 80px; font-weight: bold; cursor: pointer;"> Forgot Password?</p>
+                </div>
+                <div>
+                    <button class="login-button"> Login </button>
+                    <button class="signup-button" onclick="window.location.href = 'signup.html'"> Sign up</button>
+                </div>
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            function updateClock(){
+                var now = new Date();
+                var dname = now.getDay(),
+                    mo = now.getMonth(),
+                    dnum = now.getDate(),
+                    yr = now.getFullYear(),
+                    hou = now.getHours(),
+                    min = now.getMinutes(),
+                    sec = now.getSeconds(),
+                    pe = "AM";
+
+                    if (hou == 0){
+                        hou = 12;
+                    }
+                    if(hou > 12){
+                        hou = hou - 12;
+                        pe = "PM";
+                    }
+
+                    Number.prototype.pad = function(digits){
+                        for(var n = this.toString(); n.length < digits; n = 0 + n);
+                        return n;
+                    }
+
+                    var months = ["January", "February", "March", "April", "May",
+                    "June", "July", "August", "September", "October", "November", "December"];
+                    var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    var ids = [ "dayname","month", "daynum","year", "hour", "minutes", "seconds", "period"];
+                    var values = [week[dname],months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+                    for(var i = 0; i < ids.length; i++)
+                        document.getElementById(ids[i]).firstChild.nodeValue=values[i];
+
+            }
+            function initClock(){
+                updateClock();
+                window.setInterval("updateClock()", 1);
+
+            }
+
+        </script>
+    </body>
+</html>
+

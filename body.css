@@ -1,0 +1,57 @@
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.tup-logoo{
+    display: flex;
+}
+.tup-logo{
+    width: 600px;
+    margin-left: 200px;
+}
+.info-area{
+    margin-top: 150px;
+    width: 400px;
+    margin-right: 300px;    
+}
+.email-pass{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+.OTP-forgot{
+    margin-top: 10px;
+}
+.login-button{
+    width: 150px; 
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    background: white;
+    color: white;
+    background: red;
+    border-style: none;
+}
+.login-button:active{
+    background-color: rgb(148, 0, 0);
+}
+.signup-button{
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: red;
+    border-style: solid;
+    border-color: red;
+    background-color: white;
+    margin-bottom: 300px;
+}
+.signup-button:active{
+    background-color: red;
+    color: white;
+ }

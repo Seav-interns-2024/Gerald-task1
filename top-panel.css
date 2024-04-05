@@ -1,0 +1,71 @@
+p{
+    font-family: Arial;
+}
+body{
+    margin: 0;
+    margin-bottom: 1000px;
+}
+
+.top-panel{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100px;
+    background-color: rgb(202, 28, 28);
+    justify-content: space-between;
+
+}
+.notif-bell{
+    display: flex;
+    align-items: center;**
+}
+.bell-icon{
+    margin-right: 50px;
+    height: 50px;
+}
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tup-logoo{
+    display: flex;
+}
+.tup-logo{
+    margin-top: 200px;
+    margin-left: 350px;
+}
+.info-area{
+    margin-top: 250px;
+
+    width: 400px;
+    margin-right: 400px;
+
+}
+.email-pass{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+
+    margin-top: 20px;
+}
+.email-password{
+    margin-top: 5px;
+}
+.login-button{
+
+    margin-top: 10px;
+    height:35px;
+    width: 145px;
+    margin-right: 10px;
+
+}
+.signup-button{
+    height:35px;
+    width: 145px;
+
+}

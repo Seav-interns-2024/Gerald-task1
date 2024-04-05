@@ -1,0 +1,39 @@
+
+.datetime{
+    display: flex;
+    font-weight: bold;
+    color: rgb(223, 223, 223);
+    font-family: Arial;
+    width: 100px;
+    margin-left: 1100px;
+    margin-top: 50px;
+}
+.date{
+    margin-left: 95px;
+}
+
+.time{
+    font-weight: bold;
+    margin-right: 90px;
+    margin-top: 25px;
+    display: flex;
+    color: rgb(223, 223, 223);
+    font-family: Arial;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    margin: 0 6px;
+    font-weight: bold;
+    text-align: center;
+}
+.time span:last-child{
+    display: flex;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 6px;
+    padding: 0 5px;
+    border-radius: 3px;
+    margin-bottom: 0px;
+}
